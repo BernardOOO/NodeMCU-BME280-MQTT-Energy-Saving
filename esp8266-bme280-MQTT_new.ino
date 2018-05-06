@@ -29,7 +29,11 @@
  - connect D0 pin to RST pin in order to enable the ESP8266 to wake up periodically
    (only after uploading the sketch!)
  - connect the Vout of your voltage divider to NodeMCU A0
- - connect the bme280:   
+ - connect the bme280:
+      BME280 GND --> NodeMCU GND
+      BME280 3.3V --> NodeMCU 3V3
+      BME280 SDA --> NodeMCU D3
+      BME280 SCL --> NodeMCU D2
      
  This sketch is the result of the compilation of some diyers and arduinoers. Thanks to
  them!
