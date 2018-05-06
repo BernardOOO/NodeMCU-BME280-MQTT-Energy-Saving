@@ -1,9 +1,8 @@
 # NodeMCU-BME280-MQTT-Energy-Saving
 
-This sketch publishes temperature humidity and barometric pressure data from a bme280
- device to a MQTT topic.
- It also publish the battery voltage but you have to install a voltage divider. (see 
- https://en.wikipedia.org/wiki/Voltage_divider if needed).
+This sketch publishes temperature humidity and barometric pressure data from a bme280 device to a MQTT topic.
+It also publish the battery voltage but you have to install a voltage divider. 
+(see  https://en.wikipedia.org/wiki/Voltage_divider if needed).
  
 
         Vin <---o
@@ -22,18 +21,21 @@ This sketch publishes temperature humidity and barometric pressure data from a b
                /// Gnd
                 
  
- This sketch goes in deep sleep mode once the data has been sent to the MQTT
- topic and wakes up periodically (configure SLEEP_DELAY_IN_SECONDS accordingly).
+This sketch goes in deep sleep mode once the data has been sent to the MQTT topic and wakes up periodically.
+(configure SLEEP_DELAY_IN_SECONDS accordingly).
  
- Hookup guide:
+Hookup guide:
  
  - connect D0 pin to RST pin in order to enable the ESP8266 to wake up periodically
    (only after uploading the sketch!)
  - connect the Vout of your voltage divider to NodeMCU A0
- - connect the bme280:   
+ - connect the bme280:
+     BME280 GND --> NodeMCU GND
+     BME280 3.3V --> NodeMCU 3V3
+     BME280 SDA --> NodeMCU D3
+     BME280 SCL --> NodeMCU D2
      
- This sketch is the result of the compilation of some diyers and arduinoers. Thanks to
- them!
+ This sketch is the result of the compilation of some diyers and arduinoers. Thanks to them!
  And of course it is in public domain.
 
  Enjoy!
