@@ -59,12 +59,12 @@ char pressHpaString[6];
 char voltageString[6];
 String responseJson;
 
-const char* ssid = "MeKesKiDi2"; // WiFi network SSID
-const char* password = "abcdef0123"; // WiFi network password
+const char* ssid = ".............."; // WiFi network SSID
+const char* password = ".........."; // WiFi network password
 
-const char* mqtt_server = "192.168.1.35"; // MQTT broker URL
-const char* mqtt_username = ""; // MQTT client user name, if needed
-const char* mqtt_password = ""; // MQTT client password, if needed
+const char* mqtt_server = "......."; // MQTT broker URL
+const char* mqtt_username = "";      // MQTT client user name, if needed
+const char* mqtt_password = "";      // MQTT client password, if needed
 
 WiFiClient espClient;
 PubSubClient client(espClient);
