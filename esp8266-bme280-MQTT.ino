@@ -184,8 +184,13 @@ void loop()
     Serial.println("Voltage: ");
     printValueAndUnits(level/100, " V");
 
-    responseJson = "{\"sensor\": \"Livingroom\", \"data\":[" + String(tempC) + "," + String(humidity) + "," + String(pressHpa) + "," +String(level/100) + "]}";
-  
+    responseJson = "";
+    responseJson += "{";
+    responseJson +=     "\"temperature\":" + String(tempC) + ",";
+    responseJson +=     "\"humidity\":" + String(humidity) + ",";
+    responseJson +=     "\"pressure\":" + String(pressHpa) + ",";
+    responseJson +=     "\"voltage\":" + String(level/100);
+    responseJson += "}";
     setup_wifi();
     
     client.setServer(mqtt_server, 1883);
