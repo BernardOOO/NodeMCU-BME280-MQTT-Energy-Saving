@@ -141,7 +141,7 @@ void connect_mqtt() //Connecting to the MQTT broker
   
         // Once connected, publish an announcement...
         Serial.println("Sending topic(s)...");
-        client.publish("topicJson", responseJson.c_str(), true);
+        client.publish("sensor/external", responseJson.c_str(), true);
         client.publish("sensors/test/voltage", dtostrf(level/100, 2, 2, voltageString));
       }
     else
